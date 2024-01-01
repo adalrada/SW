@@ -1,5 +1,4 @@
 <?php
-
 // if the url field is empty
 if(isset($_POST['url']) && $_POST['url'] == ''){
 
@@ -14,7 +13,7 @@ if(isset($_POST['url']) && $_POST['url'] == ''){
 	Phone:  $_POST[phone]
 	Message:  $_POST[message]";
 
-	if( $_POST['email'] && !preg_match( "/[\r\n]/", $_POST['email']) ) {
+	if($_POST['email'] && !preg_match( "/[\r\n]/", $_POST['email']) ) {
 	  $headers = "From: $_POST[email]";
 	} else {
 	  $headers = "From: $youremail";
